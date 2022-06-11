@@ -122,3 +122,17 @@ subplot(2,1,2)
 Y1=fftshift(fft(y1));
 F2=-FS/2:FS/length(Y1):FS/2-FS/length(Y1);
 plot(F2, abs(Y1),'b')
+
+%Sonidos
+str=0;
+while (ne(str,3))
+    prompt = '[1]Audio Original\n[2]Audio Filtrado\n[3]Salir\n';
+    str = input(prompt);
+    if str == 1
+        sound(x,FS);
+    elseif str == 2
+        sound(y1,FS);
+    else
+        break;
+    end
+end
