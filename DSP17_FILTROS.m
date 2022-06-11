@@ -87,6 +87,7 @@ while (ne(opc,3))
                 sound(x,FS);
             elseif str == 2
                 sound(y2f,FS);
+                audiowrite('ToledoAguadoArturoEmmanuel_FiltradaFIR.wav',y2f,FS);
             else
                 break;
             end
@@ -137,6 +138,7 @@ while (ne(opc,3))
             sound(x,FS);
         elseif str == 2
             sound(y1,FS);
+            audiowrite('ToledoAguadoArturoEmmanuel_FiltradaIIR.wav',y1,FS);
         else
             break;
         end
